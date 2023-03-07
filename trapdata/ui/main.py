@@ -44,6 +44,8 @@ from .summary import SpeciesSummaryScreen
 from .species_summary import SpeciesSummaryGridScreen
 from .queue import QueueScreen
 
+from .web_view import TrapDataWebView
+
 
 kivy.require("2.1.0")
 
@@ -387,7 +389,8 @@ class TrapDataApp(App):
 
 # @newrelic.agent.background_task()
 def run():
-    TrapDataApp().run()
+    TrapDataWebView().run()
+    # TrapDataApp().run()
     # loop = asyncio.get_event_loop()
     # loop.run_until_complete(TrapDataAnalyzer().async_run())
     # loop.close()
